@@ -42,9 +42,14 @@
                 <div class="content-layout">
                     <div class="content-layout-row">
                         <div class="layout-cell content"><div class="block clearfix">
+<<<<<<< HEAD
                                 
         <div class="blockheader">
             <h1 class="t">Profil - Edit Profil</h1>
+=======
+        <div class="blockheader">
+            <h1>Profil - Edit Profil</h1>
+>>>>>>> origin/master
             <h2>${pageContext.request.userPrincipal.name}</h2>
         </div>
 

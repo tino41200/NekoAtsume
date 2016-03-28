@@ -2693,6 +2693,7 @@ blockquote p,
     width: 300px;
 }
 
+<<<<<<< HEAD
 .requis {
     color: #c00;
 }
@@ -2701,6 +2702,8 @@ blockquote p,
     color: #900;
 }
 
+=======
+>>>>>>> origin/master
 /* Begin Additional CSS Styles */
 
 /* End Additional CSS Styles */

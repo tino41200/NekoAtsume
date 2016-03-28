@@ -32,6 +32,7 @@ public class UserDAOImpl implements UserDAO{
 			return null;
 	}
 
+<<<<<<< HEAD
         @Override
 	public User getUser(String login) {
 		List<User> userList = new ArrayList<User>();
@@ -45,6 +46,19 @@ public class UserDAOImpl implements UserDAO{
 	}
 
         @Override
+=======
+	public User getUser(String login) {
+		List<User> userList = new ArrayList<User>();
+		Query query = openSession().createQuery("from User u where u.login = :login");
+		query.setParameter("login", login);
+		userList = query.list();
+		if(userList.size()>0)
+			return userList.get(0);
+		else
+			return null;
+	}
+
+>>>>>>> origin/master
 	public void add(User user) {
 		openSession().persist(user);
 	}

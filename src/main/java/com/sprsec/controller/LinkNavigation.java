@@ -62,7 +62,11 @@ public class LinkNavigation {
 	@RequestMapping(value = { "/newuser" }, method = RequestMethod.POST)
 	public String saveUser(@Valid User user, BindingResult result,
 			ModelMap model) {
+<<<<<<< HEAD
             		userService.addUser(user);
+=======
+		userService.addUser(user);
+>>>>>>> origin/master
 		
 		model.addAttribute("log", true);
 		model.addAttribute("userLog1", user.getLogin());
