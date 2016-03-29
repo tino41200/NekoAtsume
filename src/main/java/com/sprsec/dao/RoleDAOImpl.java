@@ -8,18 +8,18 @@ import org.springframework.stereotype.Repository;
 import com.sprsec.model.Role;
 
 @Repository
-public class RoleDAOImpl implements RoleDAO{
-	
-	@Autowired
-	private SessionFactory sessionFactory;
-	
-	private Session getCurrentSession(){
-		return sessionFactory.getCurrentSession();
-	}
+public class RoleDAOImpl implements RoleDAO {
 
-	public Role getRole(int id) {
-		Role role = (Role) getCurrentSession().load(Role.class, id);
-		return role;
-	}
-	
+    @Autowired
+    private SessionFactory sessionFactory;
+
+    private Session getCurrentSession() {
+        return sessionFactory.getCurrentSession();
+    }
+
+    public Role getRole(int id) {
+        Role role = (Role) getCurrentSession().load(Role.class, id);
+        return role;
+    }
+
 }

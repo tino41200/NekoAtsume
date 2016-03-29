@@ -1,5 +1,7 @@
 package com.sprsec.service;
 
+import java.util.List;
+
 import javax.annotation.Resource;
 
 import org.hibernate.Session;
@@ -51,5 +53,16 @@ public class UserServiceImpl implements UserService{
 			entity.setLogin(user.getLogin());
 			entity.setPassword(user.getPassword());
 		}
+	}
+
+	@Override
+	public List<User> listeUser() {
+		// TODO Auto-generated method stub
+		return userDAO.listeUser();
+	}
+
+	@Override
+	public void deleteUser(int id) {
+		userDAO.deleteUser(id);
 	}
 }

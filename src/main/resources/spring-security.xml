@@ -12,7 +12,11 @@
 		<intercept-url pattern="/accueil.html" access="ROLE_MODERATOR" />
 		<intercept-url pattern="/chats.html" access="ROLE_MODERATOR"/>
 		<intercept-url pattern="/chats" access="ROLE_MODERATOR"/>
-		<intercept-url pattern="/admin/*" access="ROLE_ADMIN" />
+		<intercept-url pattern="/astuce.html" access="ROLE_MODERATOR"/>
+		<intercept-url pattern="/astuce" access="ROLE_MODERATOR"/>
+		<intercept-url pattern="/admin" access="ROLE_ADMIN" />
+		<intercept-url pattern="/admin.html" access="ROLE_ADMIN" />
+		<intercept-url pattern="/admin-*" access="ROLE_ADMIN" />
 		
 		<form-login login-page="/user-login.html" 
 			default-target-url="/accueil.html"

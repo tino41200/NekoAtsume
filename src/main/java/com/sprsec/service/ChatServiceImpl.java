@@ -20,11 +20,17 @@ public class ChatServiceImpl implements ChatService{
 		return chatDAO.rechercheParNom(nom);
 	}
 
-        public Chat rechercherParNomJaponais(String nomJaponais) {
-		return chatDAO.rechercheParNomJaponais(nomJaponais);
-	}
-        
 	public List<Chat> listeChat() {
 		return chatDAO.listeChat();
+	}
+
+	@Override
+	public List<Chat> listeChatRare() {
+		return chatDAO.listeChatRare();
+	}
+
+	@Override
+	public List<Chat> listeChatCommun() {
+		return chatDAO.listeChatCommun();
 	}
 }

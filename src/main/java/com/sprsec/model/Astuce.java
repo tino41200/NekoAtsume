@@ -30,7 +30,7 @@ public class Astuce implements Serializable{
 	@Column(name = "commentaire")
 	private String commentaire;
 	@Column(name = "vote_plus", length = 50)
-	private String voteplus;
+	private Integer voteplus;
 	@Column(name = "vote_moins")
 	private Integer vote_moins;
 	
@@ -39,7 +39,7 @@ public class Astuce implements Serializable{
 		// TODO Auto-generated constructor stub
 	}
 
-	public Astuce(String nomchat, String username, String commentaire, String voteplus, Integer vote_moins) {
+	public Astuce(String nomchat, String username, String commentaire, Integer voteplus, Integer vote_moins) {
 		super();
 		this.nomchat = nomchat;
 		this.username = username;
@@ -80,11 +80,11 @@ public class Astuce implements Serializable{
 		this.commentaire = commentaire;
 	}
 
-	public String getVoteplus() {
+	public Integer getVoteplus() {
 		return voteplus;
 	}
 
-	public void setVoteplus(String voteplus) {
+	public void setVoteplus(Integer voteplus) {
 		this.voteplus = voteplus;
 	}
 

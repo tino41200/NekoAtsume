@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.sprsec.dao.AstuceDAO;
+import com.sprsec.model.AjoutAstuce;
 import com.sprsec.model.Astuce;
 
 @Service("astuceService")
@@ -18,29 +19,39 @@ public class AstuceServiceImpl implements AstuceService{
 
 	@Override
 	public List<Astuce> getAllAstuce() {
-		return getAllAstuce();
+		return astuceDAO.getAllAstuce();
 	}
 
 	@Override
-	public List<Astuce> getAstuce(String chatname, String username) {
-		return getAstuce(chatname, username);
+	public List<Astuce> getAstuce(String chatname) {
+		return astuceDAO.getAstuce(chatname);
 	}
 
 	@Override
-	public void addAstuce(Astuce astuce) {
+	public void addAstuce(AjoutAstuce astuce) {
 		astuceDAO.addAstuce(astuce);
 	}
 
 	@Override
 	public void addPlus(Astuce astuce) {
-		// TODO Auto-generated method stub
+		astuceDAO.addPlus(astuce);
 		
 	}
 
 	@Override
 	public void addMoins(Astuce astuce) {
-		// TODO Auto-generated method stub
+		astuceDAO.addMoins(astuce);
 		
+	}
+
+	@Override
+	public Astuce getAstuceById(int id) {
+		return astuceDAO.getAstuceById(id);
+	}
+
+	@Override
+	public void deleteAstuce(int id) {
+		astuceDAO.deleteAstuce(id);
 	}
 
 }

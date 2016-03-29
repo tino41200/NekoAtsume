@@ -13,31 +13,34 @@ import com.sprsec.service.UserService;
 
 @Controller
 public class SecurityNavigation {
-	
-	@Autowired
-	UserService userService;
-	
-	@RequestMapping(value={"/","/user-login.html"}, method=RequestMethod.GET)
-	public ModelAndView loginForm(){
-		return new ModelAndView("login-form");
-	}
-	@RequestMapping(value={"/user-login"}, method=RequestMethod.POST)
-	public String loginOk(@RequestParam("login")String login, ModelMap mod){
-		//ModelAndView model = new ModelAndView("login-form");
-		User existinguser = userService.getUser(login);
-		mod.addAttribute("userlog", existinguser.getLogin());
-		return "acceuil";
-	}
-//	
-	@RequestMapping(value="/error-login", method=RequestMethod.GET)
-	public ModelAndView invalidLogin(){
-		ModelAndView modelAndView = new ModelAndView("login-form");
-		modelAndView.addObject("error", true);
-		return modelAndView;
-	}
-	
-//	@RequestMapping(value="/success-login", method=RequestMethod.GET)
-//	public ModelAndView successLogin(){
-//		return new ModelAndView("success-login");
-//	}
+
+    @Autowired
+    UserService userService;
+
+    @RequestMapping(value = {"/", "/user-login.html"}, method = RequestMethod.GET)
+    public ModelAndView loginForm() {
+
+        return new ModelAndView("login-form");
+
+    }
+
+    @RequestMapping(value = {"/user-login"}, method = RequestMethod.POST)
+    public String loginOk(@RequestParam("login") String login, ModelMap mod) {
+        User existinguser = userService.getUser(login);
+        if (login.equals("admin")) {
+            System.out.println("je suis l'administrateur");
+            mod.addAttribute("adm", true);
+        }
+        System.out.println("je suis un utilisateur");
+        mod.addAttribute("userlog", existinguser.getLogin());
+        return "acceuil";
+    }
+
+    @RequestMapping(value = "/error-login", method = RequestMethod.GET)
+    public ModelAndView invalidLogin() {
+        ModelAndView modelAndView = new ModelAndView("login-form");
+        modelAndView.addObject("error", true);
+        return modelAndView;
+    }
+
 }
