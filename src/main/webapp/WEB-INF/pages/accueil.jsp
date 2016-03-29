@@ -16,12 +16,6 @@
         <script src="/resource/style/jquery.js"></script>
         <script src="/resource/style/script.js"></script>
         <script src="/resource/style/script.responsive.js"></script>
-
-        <style>.content .postcontent-0 .layout-item-0 { padding-right: 10px;padding-left: 10px;  }
-            .ie7 .post .layout-cell {border:none !important; padding:0 !important; }
-            .ie6 .post .layout-cell {border:none !important; padding:0 !important; }
-
-        </style>
     </head>
     <body>
         <div id="main">
@@ -30,16 +24,18 @@
                 </div>
             </header>
             <nav class="nav">
-                <ul class="hmenu"><li><a href="accueil.html" class="active">Accueil</a></li>
-                    <li><a href="chats">Chats</a>
+                <ul class="hmenu">
+                    <li><a href="accueil.html" class="active">Accueil</a></li>
+                    <li><a href="chats.html">Chats</a>
                         <ul>
-                            <li><a href="rare.html">Rares</a></li>
-                            <li><a href="communs.html">Communs</a></li>
+                            <li><a href="chats/rare.html">Rares</a></li>
+                            <li><a href="chats/communs.html">Communs</a></li>
                         </ul>
                     </li>
-                    <li><a href="astuces">Astuces</a></li>  
+                    <li><a href="astuces.html">Astuces</a></li>  
                     <li><a href="${pageContext.request.contextPath}/edituser-${pageContext.request.userPrincipal.name}">Edit compte : ${pageContext.request.userPrincipal.name}</a></li>
                     <li><a href="<c:url value="/j_spring_security_logout" />" >Logout</a></li>
+                </ul>
             </nav>
             <div class="sheet clearfix">
                 <div class="layout-wrapper">

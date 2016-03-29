@@ -16,13 +16,6 @@
         <script src="/resource/style/jquery.js"></script>
         <script src="/resource/style/script.js"></script>
         <script src="/resource/style/script.responsive.js"></script>
-
-
-        <style>.content .postcontent-0 .layout-item-0 { padding-right: 10px;padding-left: 10px;  }
-            .ie7 .post .layout-cell {border:none !important; padding:0 !important; }
-            .ie6 .post .layout-cell {border:none !important; padding:0 !important; }
-
-        </style>
     </head>
     <body>
         <div id="main">
@@ -37,7 +30,8 @@
                             <div class="layout-cell content">
                                 <article class="post article">
                                     <div class="postmetadataheader">
-                                        <ul><li><a href="${pageContext.request.contextPath}/index.html">Accueil page</a></li>
+                                        <ul>
+                                            <li><a href="${pageContext.request.contextPath}/index.html">Accueil page</a></li>
                                             <li><a href="admin-chats.html">Listes chats</a></li>
                                             <li><a href="admin-astuces.html">Listes astuces</a></li>
                                             <li><a href="admin-users.html">Listes users</a></li>
@@ -50,14 +44,13 @@
                     </div>
                 </div>
             </div>
-    </body>
-    <footer class="footer">
-        <div class="footer-inner">
-            <p class="page-footer">
-                <span id="footnote-links">Developpé par : Diamantino - Gaël - Iandry - Kévin.</span>
-            </p>
+            <footer class="footer">
+                <div class="footer-inner">
+                    <p class="page-footer">
+                        <span id="footnote-links">Developpé par : Diamantino - Gaël - Iandry - Kévin.</span>
+                    </p>
+                </div>
+            </footer>
         </div>
-    </footer>
-</div>
-</body>
+    </body>
 </html>

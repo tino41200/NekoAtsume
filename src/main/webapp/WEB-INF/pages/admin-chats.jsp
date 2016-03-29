@@ -3,39 +3,28 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html dir="ltr" lang="en-US"><head>
-    <meta charset="utf-8">
-    <title>Admin - Chats</title>
-    <meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0, user-scalable = no, width = device-width">
+<html dir="ltr" lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <title>Admin - Chats</title>
+        <meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0, user-scalable = no, width = device-width">
 
-    <!--[if lt IE 9]><script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-    <link rel="stylesheet" href="/resource/style/style.css" media="screen">
-    <!--[if lte IE 7]><link rel="stylesheet" href="style.ie7.css" media="screen" /><![endif]-->
-    <link rel="stylesheet" href="/resource/style/style.responsive.css" media="all">
-
-
-    <script src="/resource/style/jquery.js"></script>
-    <script src="/resource/style/script.js"></script>
-    <script src="/resource/style/script.responsive.js"></script>
+        <!--[if lt IE 9]><script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+        <link rel="stylesheet" href="/resource/style/style.css" media="screen">
+        <!--[if lte IE 7]><link rel="stylesheet" href="style.ie7.css" media="screen" /><![endif]-->
+        <link rel="stylesheet" href="/resource/style/style.responsive.css" media="all">
 
 
-
-        <style>.content .postcontent-0 .layout-item-0 { padding-right: 10px;padding-left: 10px;  }
-            .ie7 .post .layout-cell {border:none !important; padding:0 !important; }
-            .ie6 .post .layout-cell {border:none !important; padding:0 !important; }
-
-        </style></head>
+        <script src="/resource/style/jquery.js"></script>
+        <script src="/resource/style/script.js"></script>
+        <script src="/resource/style/script.responsive.js"></script>
+    </head>
     <body>
-
         <div id="main">
             <header class="header">
-
-
                 <div class="shapes">
-
                 </div> 
             </header>
-
             <div class="sheet clearfix">
                 <div class="layout-wrapper">
                     <div class="content-layout">
@@ -44,7 +33,6 @@
                                 <article class="post article">
                                     <div class="postmetadataheader">
                                         <a href="${pageContext.request.contextPath}/admin.html">Admin page</a><br/><br/>
-
                                         <table style="border: 1px solid; width: 100%; text-align:center">
                                             <thead style = "background:#d3dce3">
                                                 <tr>
@@ -74,10 +62,8 @@
                                                         <td><a href = "#">Supprimer</a></td>
                                                     </tr>
                                                 </c:forEach>
-
                                             </tbody>
                                         </table>
-
                                     </div>
                                 </article>
                             </div>
@@ -85,16 +71,13 @@
                     </div>
                 </div>
             </div>
-
-    </body>
-    <footer class="footer">
-        <div class="footer-inner">
-
-            <p class="page-footer">
-                <span id="footnote-links">Developpé par : Diamantino - Gaël - Iandry - Kévin.</span>
-            </p>
+            <footer class="footer">
+                <div class="footer-inner">
+                    <p class="page-footer">
+                        <span id="footnote-links">Developpé par : Diamantino - Gaël - Iandry - Kévin.</span>
+                    </p>
+                </div>
+            </footer>
         </div>
-    </footer>
-</div>
-</body>
+    </body>
 </html>

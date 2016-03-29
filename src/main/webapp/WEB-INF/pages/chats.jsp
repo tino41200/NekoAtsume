@@ -3,7 +3,8 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html dir="ltr" lang="en-US"><head>
+<html dir="ltr" lang="en-US">
+    <head>
         <meta charset="utf-8">
         <title>Liste des Chats</title>
         <meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0, user-scalable = no, width = device-width">
@@ -13,36 +14,25 @@
         <!--[if lte IE 7]><link rel="stylesheet" href="style.ie7.css" media="screen" /><![endif]-->
         <link rel="stylesheet" href="/resource/style/style.responsive.css" media="all">
 
-
         <script src="/resource/style/jquery.js"></script>
         <script src="/resource/style/script.js"></script>
         <script src="/resource/style/script.responsive.js"></script>
-
-
-
     </head>
     <body>
         <div id="main">
             <header class="header">
-
-
                 <div class="shapes">
-
                 </div>
-
-
-
-
-
-
             </header>
             <nav class="nav">
-                <ul class="hmenu"><li><a href="accueil.html" class="active">Accueil</a></li>
-                    <li><a href="chats">Chats</a><ul><li><a href="rare.html">Rares</a></li>
+                <ul class="hmenu">
+                    <li><a href="accueil.html" class="active">Accueil</a></li>
+                    <li><a href="chats.html">Chats</a><ul><li><a href="rare.html">Rares</a></li>
                             <li><a href="communs.html">Communs</a></li></ul></li>
-                    <li><a href="astuces">Astuces</a></li>  
+                    <li><a href="astuces.html">Astuces</a></li>  
                     <li><a href="${pageContext.request.contextPath}/edituser-${pageContext.request.userPrincipal.name}">Edit compte : ${pageContext.request.userPrincipal.name}</a></li>
                     <li><a href="<c:url value="/j_spring_security_logout" />" >Logout</a></li>
+                </ul>
             </nav>
             <div class="sheet clearfix">
                 <div class="layout-wrapper">
@@ -63,9 +53,6 @@
                                     <br><br>
                                     <div class="postmetadataheader">
                                         <h2 class="postheader">Liste des chats</h2>
-
-
-                                        <
                                         <table style="border: 1px solid; width: 100%; text-align:center">
                                             <thead style = "background:#d3dce3">
                                                 <tr>
@@ -90,7 +77,6 @@
                                                             <td><c:out value="${listechat.description }"/></td>
                                                             <td><c:out value="${listechat.personnalite }"/></td>
                                                             <td><c:out value="${listechat.niveau }"/></td>
-                    <!--					<td><a href="/astuce-${liste.nom}">Astuce</a></td>-->
                                                         </tr>
                                                     </c:when>
                                                     <c:otherwise>
@@ -104,7 +90,6 @@
                                                                 <td><c:out value="${liste.description }"/></td>
                                                                 <td><c:out value="${liste.personnalite }"/></td>
                                                                 <td><c:out value="${liste.niveau }"/></td>
-                        <!--					<td><a href="/astuce-${liste.nom}">Astuce</a></td>-->
                                                             </tr>
                                                         </c:forEach>
                                                     </c:otherwise>
@@ -119,16 +104,12 @@
                                                     <td><c:out value="${chat.description }"/></td>
                                                     <td><c:out value="${chat.personnalite }"/></td>
                                                     <td><c:out value="${chat.niveau }"/></td>
-
-
                                                 </c:when>
                                             </c:choose> 
                                             </tbody>
-
                                         </table>
                                         <c:choose>
                                             <c:when test="${find}">
-
                                                 <a href="<c:url value="/chats" />">Voir liste chat</a>
                                             </c:when>
                                         </c:choose> 
@@ -136,7 +117,6 @@
                                     <!-- ****************************ESSAYER AJOUT ASTUCE -->
                                     <br><br><br><br>
                                     <div class="postmetadataheader">
-
                                         <c:choose>
                                             <c:when test="${astuce}">
                                                 <form:form commandName="ajout" action="/astuce-${chat.nom}">
@@ -145,9 +125,6 @@
                                                         <th ><c:out value="${chat.nom}" /></th>
                                                         <th><c:out value="${pageContext.request.userPrincipal.name}"/></th><br />
                                                     </tr>
-
-
-
                                                     <tr>
                                                         <td><form:label path="chatnom">Nom chat : </form:label></td>
                                                         <td><form:input type="text" path="chatnom" value="${chat.nom}"/></td>
@@ -160,26 +137,18 @@
                                                         <td><form:label path="commentaire">Astuce : </form:label></td>
                                                         <td><form:input type="text" path="commentaire"/></td>
                                                     </tr>
-
-
                                                     <input type="submit" value="Ajouter astuce"/> 
                                                 </form:form>	
                                             </c:when>
                                         </c:choose> 
-
-
                                     </div>
                                     <br><br><br><br>
                                     <div class="postmetadataheader">
                                         <c:if test="${!empty listastuce}">
                                             <c:forEach items="${listastuce}" var="ast">
-
                                                 <tr>
-
-
                                                     <td>${ast.commentaire}</td>
                                                     - commented by <td>${ast.username}</td>
-
                                                     <form:form commandName="voteplus" action="/voteplus-${ast.idastuce}">
                                                     <input type="submit" value="pour"/> ${ast.voteplus}
                                                 </form:form>	
@@ -188,30 +157,25 @@
                                                 </form:form>
                                                 </tr>
                                             </c:forEach>
-
                                         </c:if>
                                         <!-- *************************FIN AJOUT ASTUCE -->
-
                                     </div>
-                                    <div class="postcontent postcontent-0 clearfix"><p><br></p></div>
-
-
-                                </article></div>
-
+                                    <div class="postcontent postcontent-0 clearfix">
+                                        <p><br></p>
+                                    </div>
+                                </article>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             <footer class="footer">
                 <div class="footer-inner">
-
                     <p class="page-footer">
                         <span id="footnote-links">Developpé par : Diamantino - Gaël - Iandry - Kévin.</span>
                     </p>
                 </div>
             </footer>
-
         </div>
-
-
-    </body></html>
+    </body>
+</html>
