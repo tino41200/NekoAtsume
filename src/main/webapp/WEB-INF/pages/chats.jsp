@@ -115,27 +115,27 @@
                                         </c:choose> 
                                     </div>
                                     <!-- ****************************ESSAYER AJOUT ASTUCE -->
-                                    <br><br><br><br>
+                                    <br>
+                                    <hr width="80%" align="center" style="color: #DCE3EA">
+                                    <br>
                                     <div class="postmetadataheader">
+                                        <h2 class="postheader">Ajouter une astuce</h2>
                                         <c:choose>
                                             <c:when test="${astuce}">
                                                 <form:form commandName="ajout" action="/astuce-${chat.nom}">
                                                     <tr>
                                                         <td><a href="${ImgUrl}"><img src="${ImgUrl}"></img></a></td>
-                                                        <th ><c:out value="${chat.nom}" /></th>
-                                                        <th><c:out value="${pageContext.request.userPrincipal.name}"/></th><br />
+                                                    <br>
                                                     </tr>
                                                     <tr>
-                                                        <td><form:label path="chatnom">Nom chat : </form:label></td>
-                                                        <td><form:input type="text" path="chatnom" value="${chat.nom}"/></td>
+                                                        <td><form:input type="hidden" path="chatnom" value="${chat.nom}"/></td>
                                                     </tr>
                                                     <tr>
-                                                        <td><form:label path="nameuser">Nom user : </form:label></td>
-                                                        <td><form:input type="text" path="nameuser" value="${pageContext.request.userPrincipal.name}"/></td>
+                                                        <td><form:input type="hidden" path="nameuser" value="${pageContext.request.userPrincipal.name}"/></td>
                                                     </tr>
                                                     <tr>
                                                         <td><form:label path="commentaire">Astuce : </form:label></td>
-                                                        <td><form:input type="text" path="commentaire"/></td>
+                                                        <td><form:textarea type="text" path="commentaire" rows="5"/></td>
                                                     </tr>
                                                     <input type="submit" value="Ajouter astuce"/> 
                                                 </form:form>	

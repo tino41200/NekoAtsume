@@ -1958,6 +1958,23 @@ pre
    padding: 1px;
 }
 
+.postmetadataheaderastuce
+{
+   background: #C9D3DE;
+   background: rgba(201, 211, 222, 0.7);
+   border-bottom:1px solid #9CAFC4;
+   margin:0 auto;
+   position:relative;
+   z-index:1;
+   padding: 4px;
+   border: double 3px;
+}
+
+.postmetadataheadercommentaire
+{
+    background: #ffcc66;
+}
+
 .postheader
 {
    color: #3B4E63;

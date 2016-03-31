@@ -8,9 +8,7 @@
         <title>NekoAtsume</title>
         <meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0, user-scalable = no, width = device-width">
 
-        <!--[if lt IE 9]><script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
         <link rel="stylesheet" href="/resource/style/style.css" media="screen">
-        <!--[if lte IE 7]><link rel="stylesheet" href="style.ie7.css" media="screen" /><![endif]-->
         <link rel="stylesheet" href="/resource/style/style.responsive.css" media="all">
 
         <script src="/resource/style/jquery.js"></script>
@@ -44,16 +42,18 @@
                             <div class="layout-cell content"><article class="post article">
                                     <div class="postmetadataheader">
                                         <h2 class="postheader">About NekoAtsume</h2>
-
                                     </div>
                                     <div class="postcontent postcontent-0 clearfix"><div class="content-layout">
                                             <div class="content-layout-row">
                                                 <div class="layout-cell layout-item-0" style="width: 100%" >
                                                     <p style="margin-top: 0.4em; margin-bottom: 0.5em; color: rgb(58, 58, 58); font-family: Helvetica, Arial, sans-serif; 
-                                                       font-size: 16px; line-height: 26px; widows: 1; text-align: center;"><img width="500" height="333" alt="" 
-                                                           class="lightbox" src="/resource/img/IMG_3874.0.0-2.jpg"></p><p style="margin-top: 0.4em; margin-bottom: 0.5em; 
+                                                       font-size: 16px; line-height: 26px; widows: 1; text-align: center;">                                                    
+                                                        <img width="500" height="333" alt="" class="lightbox" src="/resource/img/IMG_3874.0.0-2.jpg">
+                                                    </p>
+                                                    <p style="margin-top: 0.4em; margin-bottom: 0.5em; 
                                                         color: rgb(58, 58, 58); font-family: Helvetica, Arial, sans-serif; font-size: 16px; line-height: 26px; widows: 1; 
-                                                                                                                       text-align: center;"><b style="font-style: inherit;">Neko Atsume</b>&nbsp;(Kitty Collector in English) is a recent trending&nbsp;
+                                                        text-align: center;">
+                                                        <b style="font-style: inherit;">Neko Atsume</b>&nbsp;(Kitty Collector in English) is a recent trending&nbsp;
                                                         <a rel="nofollow" class="external text" href="https://itunes.apple.com/us/app/neko-atsume-kitty-collector/id923917775" 
                                                            style="font-style: inherit; font-weight: inherit; color: rgb(84, 132, 94);">iOS</a>&nbsp;and&nbsp;
                                                         <a rel="nofollow" class="external text" href="https://play.google.com/store/apps/details?id=jp.co.hit_point.nekoatsume" 
@@ -87,8 +87,8 @@
                             <ul class="vmenu">
                                 <li><a href="accueil.html" class="active">Accueil</a></li>
                                 <li><a href="chats.html">Chats</a>
-                                    <ul><li><a href="chats/new-page.html">Rares</a></li>
-                                        <li><a href="chats/new-page-3.html">Communs</a></li>
+                                    <ul><li><a href="chats/rares.html">Rares</a></li>
+                                        <li><a href="chats/communs.html">Communs</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="astuces.html">Astuces</a></li>

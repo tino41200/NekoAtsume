@@ -13,7 +13,6 @@
         <meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0, user-scalable = no, width = device-width">
 
         <link rel="stylesheet" href="/resource/style/style.css" media="screen">
-        <!--[if lte IE 7]><link rel="stylesheet" href="style.ie7.css" media="screen" /><![endif]-->
         <link rel="stylesheet" href="/resource/style/style.responsive.css" media="all">
 
         <script src="/resource/style/jquery.js"></script>
@@ -23,7 +22,7 @@
     <body>
         <div id="main">
             <header class="header">
-                <div class="shapes">
+                    <div class="shapes">
                 </div> 
             </header>
             <div class="sheet clearfix">
